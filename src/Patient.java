@@ -1,10 +1,9 @@
 public class Patient {
-
     private final int id;
-    private final Speciality speciality;
+    private final String speciality;
     private final long arrivalTime;
 
-    public Patient(int id, Speciality speciality) {
+    public Patient(int id, String speciality) {
         this.id = id;
         this.speciality = speciality;
         this.arrivalTime = System.currentTimeMillis();
@@ -14,11 +13,19 @@ public class Patient {
         return id;
     }
 
-    public Speciality getSpeciality() {
+    public String getSpeciality() {
         return speciality;
     }
 
-    public long getWaitingTime() {
-        return System.currentTimeMillis() - arrivalTime;
+    public long getArrivalTime() {
+        return arrivalTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "id=" + id +
+                ", speciality='" + speciality + '\'' +
+                '}';
     }
 }

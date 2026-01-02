@@ -1,47 +1,33 @@
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.TimeUnit;
+import java.util.Random;
 
 public class Consultant implements Runnable {
 
     private final String name;
-    private final BlockingQueue<Patient> queue;
-    private final HospitalStatistics statistics;
-    private volatile boolean working = true;
+    private final PatientQueue queue;
+    private final Random random = new Random();
 
-    public Consultant(String name,
-                      BlockingQueue<Patient> queue,
-                      HospitalStatistics statistics) {
+    public Consultant(String name, PatientQueue queue) {
         this.name = name;
         this.queue = queue;
-        this.statistics = statistics;
-    }
-
-    public void stop() {
-        working = false;
     }
 
     @Override
     public void run() {
         try {
-            while (working) {
-                Patient patient = queue.poll(1, TimeUnit.SECONDS);
-                if (patient != null) {
-                    treatPatient(patient);
-                }
+            while (!Thread.currentThread().isInterrupted()) {
+
+                Patient patient = queue.takePatient();
+
+                System.out.println("[TREATMENT START] " + name +
+                        " treating " + patient);
+
+                Thread.sleep(1000 + random.nextInt(2000)); // treatment time
+
+                System.out.println("[TREATMENT END] " + name +
+                        " finished " + patient);
             }
-        } catch (InterruptedException ignored) {
+        } catch (InterruptedException e) {
+            System.out.println("[SHIFT END] " + name + " going off duty.");
         }
-        System.out.println(name + " ended shift.");
-    }
-
-    private void treatPatient(Patient patient) throws InterruptedException {
-        long waitTime = patient.getWaitingTime();
-
-        System.out.println(name + " treating patient "
-                + patient.getId() + " (" + patient.getSpeciality()
-                + "), waited " + waitTime / 1000 + "s");
-
-        Thread.sleep(1000); // simulate treatment
-        statistics.recordTreatment(waitTime);
     }
 }
