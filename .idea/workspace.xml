@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="93f2674b-5b05-40de-8167-52d02aba5b74" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Consultant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Consultant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HospitalSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HospitalSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientArrival.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientArrival.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PatientQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PatientQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShiftManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShiftManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +31,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/4th year/hospital"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1767349429500</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change codes">
+      <created>1767689808682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1767689808682</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
